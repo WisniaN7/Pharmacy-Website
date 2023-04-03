@@ -1,0 +1,354 @@
+section {
+  width: 100%;
+  height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+section:first-of-type {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #ed213a, #93291e);
+  overflow: hidden;
+  z-index: -10;
+}
+
+section svg {
+  width: calc(100% / 4 * 2);
+  margin-top: 100px;
+  z-index: 10;
+}
+
+section svg #Pulse_L {
+  stroke-dasharray: 1625.6787109375;
+  stroke-dashoffset: 1625.6787109375;
+  animation: Pulse 3000ms linear infinite;
+}
+
+section svg #Small_W {
+  stroke-dasharray: 1126.4429931640625;
+  stroke-dashoffset: 1126.4429931640625;
+  animation: Small_W 3000ms linear 1000ms infinite;
+}
+
+section svg #Small_R {
+  stroke-dasharray: 220.48101806640625;
+  stroke-dashoffset: 220.48101806640625;
+  animation: Small_R 3000ms linear 1500ms infinite;
+  cursor: pointer;
+}
+
+section svg #Pulse_R {
+  stroke-dasharray: 1625.6787109375;
+  stroke-dashoffset: 1625.6787109375;
+  animation: Pulse 3000ms linear 2000ms infinite;
+}
+
+section svg #Heart {
+  transform: scale(1.1);
+  transform-origin: center;
+  animation: Heart 900ms linear infinite;
+  cursor: pointer;
+}
+
+section > div.circle {
+  margin-top: 40px;
+}
+
+section div.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: .6;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+}
+
+section div.circle.big {
+  width: 80vh;
+  height: 80vh;
+  border-radius: 50%;
+  top: 10%;
+  background: linear-gradient(135deg, #93291e, #ed213a);
+}
+
+section div.circle.medium {
+  width: 70vh;
+  height: 70vh;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ed213a, #93291e);
+}
+
+section div.circle.small {
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #93291e, #ed213a);
+}
+
+section h1, section h2 {
+  position: absolute;
+  font-family: 'Allura', cursive;
+  font-weight: 400;
+  font-size: 4.75em;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 10px 15px #000;
+  margin: 0;
+  z-index: 10;
+}
+
+section h2 {
+  top: 20%;
+  left: 15%;
+}
+
+section h1 {
+  top: 75%;
+  left: 65%;
+}
+
+section article {
+  width: 35%;
+  padding: 25px 80px;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  background-color: #ff0;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  filter: drop-shadow(0 0 15px rgba(34, 34, 34, 0.5));
+}
+section article.left {
+  background-image: url('img/Toddlers.jpg');
+  margin-left: -10%;
+  border-radius: 15px 15px 0 15px;
+}
+
+section article.right {
+  background-image: url('img/Diet.jpg');
+  text-align: right;
+  margin-left: 10%;
+  border-radius: 0 15px 15px 15px;
+}
+
+section article h3 {
+  font-family: 'Allura', cursive;
+  font-size: 2em;
+  margin: .5em 0;
+  z-index: 5;
+}
+
+section article p {
+  width: 100%;
+  position: relative;
+  padding: 15px 80px;
+  font-family: 'Raleway', sans-serif;
+  margin-left: -80px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+section article a {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #ed213a;
+  border-radius: 500px;
+  font-family: 'Raleway', sans-serif;
+  font-size: .75em;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+section article.right a {
+  float: right;
+}
+
+section article a::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  color: #ed213a;
+  word-break: keep-all;
+  white-space: nowrap;
+  border-radius: inherit;
+  transition: 300ms;
+  transition-property: width, height, padding;
+}
+
+section article a:hover::after {
+  content: 'Czytaj więcej';
+  width: 100px;
+  height: 100px;
+  padding: 10px 20px;
+}
+
+section div.drugs {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section div.drugs:last-of-type {
+  margin-top: 25px;
+}
+
+section div.drugs ul {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+section div.drugs ul li {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+section div.drugs ul li img {
+  width: 100%;
+  height: 50%;
+  border-radius: 25px 25px 0 0;
+}
+
+section div.drugs ul li h4, section div.drugs ul li p, section div.drugs ul li button, section div.drugs ul li a {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  margin: 10px 10%;
+}
+
+section div.drugs ul li h4 {
+  margin-top: 20px;
+}
+
+section div.drugs ul li button, section div.drugs ul li a {
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ed213a;
+  border-radius: 500px;
+  font-family: 'Raleway', sans-serif;
+  font-size: .75em;
+  color: #ed213a;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+section div.drugs ul li button::after, section div.drugs ul li a::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #ed213a;
+  color: #fff;
+  word-break: keep-all;
+  white-space: nowrap;
+  border-radius: inherit;
+  transition: 300ms;
+  transition-property: width, height, padding;
+}
+
+section div.drugs ul li button:hover::after {
+  content: 'Dodaj';
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+}
+
+section div.drugs ul li a:hover::after {
+  content: 'Zobacz więcej';
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+}
+
+
+@keyframes Pulse {
+  0% {
+    stroke-dashoffset: 1625.6787109375;
+  }
+  33.33% {
+    stroke-dashoffset: 0;
+  }
+  66.66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1625.6787109375;
+  }
+}
+
+@keyframes Small_W {
+  0% {
+    stroke-dashoffset: 1126.4429931640625;
+  }
+  33.33% {
+    stroke-dashoffset: 0;
+  }
+  66.66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1126.4429931640625;
+  }
+}
+
+@keyframes Small_R {
+  0% {
+    stroke-dashoffset: 220.48101806640625;
+  }
+  4.8925% {
+    stroke-dashoffset: 0;
+  }
+  66.66% {
+    stroke-dashoffset: 0;
+  }
+  71.5525% {
+    stroke-dashoffset: -220.48101806640625;
+  }
+  100% {
+    stroke-dashoffset: -220.48101806640625;
+  }
+}
+
+@keyframes Heart {
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

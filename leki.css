@@ -1,0 +1,112 @@
+section {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+section:first-of-type {
+  background: linear-gradient(135deg, #ed213a, #93291e);
+  overflow: hidden;
+}
+
+section div.drugs {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section div.drugs:last-of-type {
+  margin-top: 25px;
+}
+
+section div.drugs ul {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+section div.drugs ul li {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+section div.drugs ul li img {
+  width: 100%;
+  height: 50%;
+  border-radius: 25px 25px 0 0;
+}
+
+section div.drugs ul li h4, section div.drugs ul li p, section div.drugs ul li button, section div.drugs ul li a {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  margin: 10px 10%;
+}
+
+section div.drugs ul li h4 {
+  margin-top: 20px;
+}
+
+section div.drugs ul li button, section div.drugs ul li a {
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ed213a;
+  border-radius: 500px;
+  font-family: 'Raleway', sans-serif;
+  font-size: .75em;
+  color: #ed213a;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+section div.drugs ul li button::after, section div.drugs ul li a::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #ed213a;
+  color: #fff;
+  word-break: keep-all;
+  white-space: nowrap;
+  border-radius: inherit;
+  transition: 300ms;
+  transition-property: width, height, padding;
+}
+
+section div.drugs ul li button:hover::after {
+  content: 'Dodaj';
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+}
+
+section div.drugs ul li a:hover::after {
+  content: 'Zobacz więcej';
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+}
