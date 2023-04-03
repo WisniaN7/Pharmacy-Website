@@ -1,2 +1,2 @@
 # Serce z plusem
-Simple static website for a non existing pharmacy.
+Simple static website for a non-existing pharmacy.
